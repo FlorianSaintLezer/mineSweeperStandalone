@@ -1,17 +1,17 @@
 // MINESWEEPER STANDALONE jQUERY
 
 $(function mineSweeper(){
-  $('#msGrid').remove()
   //   CODE : MINESWEEPER
-  var k = [77, 73, 78, 69, 83, 87, 69, 69, 80, 69, 82],
-  n = 0;
+  var k = [77, 73, 78, 69, 83, 87, 69, 69, 80, 69, 82];
+  var n = 0;
   $(document).keydown(function (e) {
     if (e.keyCode === k[n++]) {
       if (n === k.length) {
         alert('MINE SWEEPER !!!');
-  
-
-
+        
+        
+        
+  $('#msGrid').remove();
   // VARIABLES
   var msBody = $('body');
   var msTotalRow = 10;
@@ -52,10 +52,6 @@ $(function mineSweeper(){
     console.log('Bombe à la case '+msBombSquare);
     $('.msSquare-'+msBombSquare).addClass('msBomb');
   }
-
-
-
-
 
 
 
